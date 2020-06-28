@@ -1,0 +1,1 @@
+export const SET_JOGS = 'SET_JOGS';
