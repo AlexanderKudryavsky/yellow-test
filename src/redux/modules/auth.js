@@ -1,5 +1,6 @@
-import { RequestService } from "../../API";
-import { SET_USER } from "../actions/auth";
+import { SET_USER } from '../actions/auth';
+import { RequestService } from '../../API';
+
 const requestService =  new RequestService();
 
 const initialState = {
@@ -24,7 +25,7 @@ const setUser = user => ({
 export const letMeIn = () => async (dispatch) => {
     const formData = new FormData();
     formData.append('uuid', 'hello');
-    const responseToken = await requestService.post('/auth/uuidLogin', formData)
+    const responseToken = await requestService.post('/auth/uuidLogin', formData);
     const token = responseToken.access_token;
     localStorage.setItem('token', token);
     const user = await requestService.get('/auth/user');
