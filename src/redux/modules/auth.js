@@ -4,7 +4,7 @@ import { RequestService } from '../../API';
 const requestService =  new RequestService();
 
 const initialState = {
-    isAuth: false,
+    isAuth: !!localStorage.getItem('token'),
     user: null
 };
 

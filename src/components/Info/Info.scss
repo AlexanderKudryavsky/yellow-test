@@ -1,0 +1,23 @@
+.info {
+  display: flex;
+  justify-content: center;
+  margin-top: 85px;
+  &-content {
+    width: 50%;
+  }
+  &-title {
+    color: #7ed321;
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    &-content {
+      width: 80%;
+    }
+  }
+}

@@ -4,6 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &-bear-face {
+    background: url("images/bear-face.png");
+    width: 160px;
+    height: 150px;
+  }
   &-window {
     height: 379px;
     width: 503px;
@@ -39,5 +44,22 @@
     justify-content: space-around;
     align-items: center;
     width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .let-me-in {
+    &-window {
+      width: auto;
+      background: #ffffff;
+    }
+    &-bear-face {
+      background: url("images/bearFace.png");
+    }
+    &-button {
+      background: #ffffff;
+      color: #e990f9;
+      border-color: #e990f9;
+    }
   }
 }

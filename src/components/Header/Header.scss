@@ -1,8 +1,108 @@
 .header {
   background: #7ed321;
+  position: relative;
   width: 100vw;
   height: 116px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 35px;
   &-logo {
-    margin: 30px 37px;
+    width: 146px;
+    height: 56px;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+  }
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 35%;
+    &-nav {
+      width: 80%;
+    }
+    &-item {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 4px;
+      &-burger {
+        display: none;
+      }
+      &-filter {
+        width: 39px;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-active {
+        padding: 4px;
+        border-bottom: 2px solid #ffffff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    height: 77px;
+    &-mobile-menu {
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      top: 0;
+      z-index: 1;
+      overflow: hidden;
+      position: fixed;
+      padding: 20px 35px;
+      &-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+      }
+      &-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 40px);
+        &-item {
+          color: #000000;
+          text-decoration: none;
+          display: block;
+          font-size: 26px;
+          text-transform: uppercase;
+          font-weight: bold;
+          line-height: 3;
+          text-align: center;
+          &-active {
+            color: #7ed321;
+          }
+        }
+      }
+    }
+    &-logo {
+      top: 20px;
+      width: 98px;
+      height: 37px;
+    }
+    &-navigation {
+      width: 25%;
+      &-nav {
+        display: none;
+      }
+      &-item {
+        &-burger {
+          display: block;
+        }
+      }
+    }
   }
 }

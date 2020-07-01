@@ -1,0 +1,40 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 116px);
+  &-button {
+    width: 249px;
+    height: 60px;
+    border-radius: 36px;
+    border: solid 3px #e990f9;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e990f9;
+  }
+  &-button:focus {
+    outline:0;
+    box-shadow: 0 0 0 1px #88b8ff;
+    border-radius: 36px;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-description {
+    font-size: 24px;
+    color: #aaaaaa;
+    text-align: center;
+    margin-top: 47px;
+  }
+  &-icon {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 140px;
+    }
+  }
+}
